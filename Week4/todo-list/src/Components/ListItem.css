@@ -1,0 +1,16 @@
+.list-item{
+    display: flex;
+    flex-direction: row;
+}
+
+.reply{
+    padding-left: 50px;
+}
+
+.replyOfReply{
+    padding-left: 100px;
+}
+
+p{
+    margin: 10px;
+}

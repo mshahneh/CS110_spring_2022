@@ -1,15 +1,15 @@
 // const url = 'http://ec2-18-209-247-77.compute-1.amazonaws.com:3000/feed/random?q=weather'
 
-// setTimeout(()=>
-// fetch(url)
-//    .then(res => res.json()) .then(data => {  
-//     //    alert("hi")d
-//    document.getElementById("tweeter").innerHTML = JSON.stringify(data, undefined, 2);
+setTimeout(()=>
+fetch(url)
+   .then(res => res.json()) .then(data => {  
+    //    alert("hi")d
+   document.getElementById("tweeter").innerHTML = JSON.stringify(data, undefined, 2);
 
-// })
-// .catch(err => {
-//     alert(err)
-// console.log(err) }), 1000)
+})
+.catch(err => {
+    alert(err)
+console.log(err) }), 1000)
 
 // ---------------------------------
 
