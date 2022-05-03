@@ -19,17 +19,16 @@ class ListItem extends React.Component { //props, state
     render() {
         if (this.props.depth > 2)
             return null
-        console.log(this.props.text)
         let componentClass = "main";
         if (this.props.depth === 1)
             componentClass = "reply";
         if (this.props.depth === 2)
             componentClass = "replyOfReply";
         return <div className={componentClass}>
-            <div className='list-item'>
+            <div className='list-item' >
             <p onClick={this.addUpvote}> {this.state.upvote}</p>
             <p> {this.props.text}</p>
-            <button> Delete </button>
+            <button onClick={this.props.onDelete}> Delete </button>
             </div>
             <ListItem depth = {this.props.depth + 1} text="child"/>
         </div>

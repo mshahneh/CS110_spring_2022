@@ -26,12 +26,18 @@ class App extends React.Component { //props, state
     this.setState({"input": v})
   }
 
+  removeTask(index){
+    let tasks = this.state.tasks
+    tasks.splice(index, 1);
+    this.setState({"tasks":tasks})
+  }
+
   render(){
     return (
       <div className="App">
-        <div> <input type="text" value={this.state.input} onChange={(e) => this.changeUserInput(e.target.value)} /> <button onClick={this.addTodo}>submit</button></div>
+        <div> <input type="text"  onChange={(e) => this.changeUserInput(e.target.value)} /> <button onClick={this.addTodo}>submit</button></div>
         {this.state.tasks.map((value, index)=>
-        <ListItem text = {value} depth={0}/>
+        <ListItem text = {value} depth={0} index={index} onDelete={()=>this.removeTask(index)}/>
         )}
       </div>
     )
